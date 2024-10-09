@@ -1,4 +1,4 @@
-/* General Styles */
+/* Global Styling */
 * {
     margin: 0;
     padding: 0;
@@ -7,138 +7,114 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
     color: #333;
-    line-height: 1.6;
-    min-height: 100vh;
 }
 
-/* Header Styles */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Section */
 header {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 20px 0;
+    background-color: #1e2a38;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
+.header-container h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    color: #f0a500;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    letter-spacing: 2px;
+    font-size: 3rem;
+    color: #fff;
     margin-bottom: 10px;
 }
 
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
 nav a {
-    margin: 0 20px;
-    font-size: 1.1em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #f0a500;
+    color: #f39c12;
 }
 
-/* Section Titles */
-section h2 {
-    font-size: 2em;
-    margin: 20px 0;
+/* Product Section */
+.product-section {
+    padding: 60px 20px;
+    background-color: #fff;
     text-align: center;
-    color: #444;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-/* Product Grid Layout */
-section {
-    padding: 40px 20px;
+.product-section h2 {
+    font-size: 2.5rem;
+    color: #1e2a38;
+    margin-bottom: 40px;
 }
 
+/* Product Card */
 .products-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .product {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    background-color: #fdfdfd;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px;
-    text-align: center;
 }
 
 .product:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .product img {
+    border-radius: 12px;
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
 .product-info {
-    padding: 20px;
+    margin-top: 20px;
 }
 
 .product-info p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
-.product-info .price {
-    font-size: 1.5em;
-    color: #f0a500;
+.price {
+    font-size: 1.5rem;
     font-weight: bold;
+    color: #27ae60;
 }
 
-/* Footer Styles */
+/* Footer Section */
 footer {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 20px;
+    background-color: #1e2a38;
+    color: #fff;
     text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 40px;
 }
 
 footer p {
-    margin: 10px 0;
-    font-size: 0.9em;
-    color: #bbb;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .products-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header h1 {
-        font-size: 2.5em;
-    }
-
-    nav a {
-        font-size: 1em;
-    }
-
-    .product {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+    margin: 0;
 }
